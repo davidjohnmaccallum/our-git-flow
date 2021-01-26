@@ -11,8 +11,15 @@ brew install gh
 cd [your project]
 # Create a Feature Branch
 newfb [branch name]
+
+# Code your feature
+
 # Create Pull Request
 newpr
+
+# Get your PR reviewed
+# Merge into develop
+
 # Close Feature Branch
 closepr
 ```
