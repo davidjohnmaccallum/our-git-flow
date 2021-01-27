@@ -22,4 +22,9 @@ newpr
 
 # Close Feature Branch
 closepr
+
+# Wait for deployment to complete
+
+# Regression test using Python test suite
+regtest
 ```
