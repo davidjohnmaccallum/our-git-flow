@@ -10,6 +10,8 @@ if [[ ! -z $(git status --short --untracked-files=no) ]]; then
     exit 2
 fi
 
+# Run tests
+sbt test
 # Checkout develop
 git checkout develop
 # Refresh develop
