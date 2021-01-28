@@ -19,3 +19,4 @@ source ./venv/bin/activate
 . ./APIAutomation/EnvironmentVariableSetup.sh 
 cd ./APIAutomation/LogisticsAutomation/Tests/Tracking 
 pytest --html=Report.html 
+open ./Report.html
