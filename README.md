@@ -9,22 +9,26 @@ brew install gh
 
 # Using
 cd [your project]
+
 # Create a Feature Branch
 newfb [branch name]
 
 # Code your feature
 
-# Create Pull Request
-newpr
+# Create Pull Request for UAT
+uatpr
 
 # Get your PR reviewed
 # Merge into develop
 
 # Close Feature Branch
-closepr
+closefb
 
 # Wait for deployment to complete
 
 # Regression test using Python test suite
 regtest
+
+# Create Pull Request for Prod
+prodpr
 ```

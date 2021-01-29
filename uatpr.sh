@@ -12,6 +12,11 @@ fi
 
 # Run tests
 sbt test
+# Check helm charts
+for d in $(ls ./charts)
+do
+  helm lint --strict ./charts/$d
+done
 # Checkout develop
 git checkout develop
 # Refresh develop
