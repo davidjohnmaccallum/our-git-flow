@@ -7,7 +7,7 @@ set -e
 branch=`git branch --show-current`
 
 # Check that this is a feature branch
-if [[ $branch -eq "master" || $branch -eq "develop" ]]; then
+if [ "$branch" = "master" ] || [ "$branch" = "develop" ]; then
     echo "Cannot close feature. Not on a feature branch."
     exit 2
 fi
