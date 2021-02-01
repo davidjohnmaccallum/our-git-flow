@@ -24,7 +24,7 @@ git merge develop
 newVer=`echo $oldVer | awk -F. '{$NF = $NF + 1;} 1' | sed 's/ /./g'`
 echo $newVer > ./version
 echo Bumped version from $oldVer to $newVer
-git commit -am "Bumped version from $oldVer to $newVer"
+git commit -am "Bumped version from $oldVer to $newVer" || true
 # Push feature branch
 git push
 # Run tests
