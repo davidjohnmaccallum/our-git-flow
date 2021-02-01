@@ -10,13 +10,6 @@ if [[ ! -z $(git status --short --untracked-files=no) ]]; then
     exit 2
 fi
 
-# Run tests
-sbt test
-# Check helm charts
-for d in $(ls ./charts)
-do
-  helm lint --strict ./charts/$d
-done
 # Checkout develop
 git checkout develop
 # Refresh develop
@@ -34,6 +27,13 @@ echo Bumped version from $oldVer to $newVer
 git commit -am "Bumped version from $oldVer to $newVer"
 # Push feature branch
 git push
+# Run tests
+sbt test
+# Check helm charts
+for d in $(ls ./charts)
+do
+  helm lint ./charts/$d
+done
 # Create pull request
 if ! gh pr view --web ; then
   gh pr create --web
