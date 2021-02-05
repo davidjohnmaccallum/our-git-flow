@@ -39,4 +39,4 @@ if ! gh pr view --web ; then
   gh pr create --web
 fi
 echo "Waiting to go to prod:"
-git --no-pager log --left-right --graph --cherry-pick --oneline develop...master
+git --no-pager log --left-right --graph --cherry-pick --oneline develop...master | grep "<"
