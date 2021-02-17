@@ -15,6 +15,7 @@ fi
 
 
 cd $LOG_AUTO_DIR
+git pull
 source ./venv/bin/activate
 . ./APIAutomation/EnvironmentVariableSetup.sh 
 cd ./APIAutomation/LogisticsAutomation/Tests/Tracking 
