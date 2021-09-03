@@ -15,6 +15,9 @@ newfb [branch name]
 
 # Code your feature
 
+# Check your test coverage
+coverage
+
 # Create Pull Request for UAT
 uatpr
 
