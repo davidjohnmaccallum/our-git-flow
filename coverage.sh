@@ -5,5 +5,7 @@ set -e
 
 sbt clean coverage test
 sbt coverageReport
-open core/target/scala-2.12/scoverage-report/index.html
+rm -rf /tmp/scoverage-report
+mv core/target/scala-2.12/scoverage-report /tmp
+open /tmp/scoverage-report/index.html
 sbt clean
