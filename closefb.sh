@@ -12,13 +12,6 @@ if [ "$branch" = "master" ] || [ "$branch" = "develop" ]; then
     exit 2
 fi
 
-# Check that the PR is not still open
-if gh pr view ; then
-    echo "Cannot close feature. PR is still open."
-    gh pr view --web
-    exit 2
-fi
-
 # Update develop and remove feature branch
 git checkout develop
 git fetch -p
